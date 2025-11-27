@@ -92,12 +92,19 @@
             grid-column: 4;
             grid-row: 1;
         }
-        /* Læsevejledning text in top right corner */
-        .læsevejledning {
+        /* Læsevejledning container in top right corner */
+        .top-right-links {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+        }
+        
+        .læsevejledning {
             color: #000000;
             font-size: 14px;
             font-weight: 600;
@@ -259,9 +266,11 @@
                 font-size: clamp(11px, 3.5vw, 14px) !important;
                 margin: 0 0 8px 0 !important;
             }
-            .læsevejledning {
+            .top-right-links {
                 top: 10px;
                 right: 10px;
+            }
+            .læsevejledning {
                 font-size: 11px;
                 padding: 5px 10px;
             }
@@ -296,7 +305,10 @@
     </style>
 </head>
 <body>
-    <a href="https://techmieriber-sketch.github.io/L-sevejlederen/" class="læsevejledning" target="_blank" rel="noopener">Læsevejledning</a>
+    <div class="top-right-links">
+        <a href="https://techmieriber-sketch.github.io/L-sevejlederen/" class="læsevejledning" target="_blank" rel="noopener">Læsevejledning</a>
+        <a href="https://techmieriber-sketch.github.io/DSA/" class="læsevejledning" target="_blank" rel="noopener">Dansk som andetsprog på EUD</a>
+    </div>
     <div class="wrap">
         <h1>Underviserens guide til ordblindevenlig undervisning</h1>
         <h2 class="subtitle">Her kan du få inspiration og vejledning til ordblindevenlig undervisning</h2>
